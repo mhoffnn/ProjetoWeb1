@@ -9,7 +9,7 @@ function CadastroEstacionamento(request, response) {
     return (
         <div>
             <img src={logo} className="logo-direita" alt="logo" />
-            <div class='cadastro' class="col-sm" id='cad'>
+            <div class='cadastro' id='cad'>
                 <h1 class='titulo'>
                     Estacionamento
                 </h1>
