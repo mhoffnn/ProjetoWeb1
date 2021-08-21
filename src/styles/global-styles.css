@@ -1,0 +1,89 @@
+body {
+    background-color: #FFFDE9;
+}
+
+body, input, button, textarea {
+    font: 400 16px 'Roboto', sans-serif;
+}
+
+button {
+    padding: 15px;
+    margin: 5px;
+    width: 40%;
+
+    background: #FFEE52;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+
+}
+   
+button:active {
+    background: #fff596;
+    border: 2px solid rgba(117, 117, 117, 0.5);
+}
+
+input {
+    padding: 15px;
+    margin: 15px;
+    width: 95%;
+
+    background: #F2F2F2;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+}
+
+textarea {
+    padding: 15px;
+    margin: 15px;
+    width: 95%;
+
+    background: #F2F2F2;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    resize: none;
+} 
+
+.cadastro{
+    width: 50em;
+    height: 40em;
+
+    margin: 4% auto 4% auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3em;
+
+    align-items: center;
+    display: block;
+
+
+    background: #FFFFFF;
+    box-shadow: 4px 4px 160px rgba(0, 0, 0, 0.16);
+    border-radius: 40px;
+}
+
+.logo-direita{
+    margin: 4% auto 4% 12%;
+    width: 16em;
+    display: block;
+}
+
+.titulo {
+    margin-left: 32%;
+    margin-right: auto;
+}
+
+a {
+    font-size: 20px;
+    line-height: 32px;
+    margin-top: 16px;
+    margin-left: 10%;
+    margin-right: 20%;
+    color: #6d6d6d;
+
+    text-decoration: none;
+  }
