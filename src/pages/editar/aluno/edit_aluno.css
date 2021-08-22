@@ -1,0 +1,28 @@
+.desc {
+    height: 30%;
+    margin-bottom: 7%;
+    width: 95%;
+}
+
+.edit_name {
+    width: 94%;
+}
+
+input {
+    width: 45%;
+}
+
+.atencao {
+    font-size: 16px;
+    margin: 20px;
+}
+
+#confirmar {
+    width: 20em;
+    margin-right: 5%;
+    margin-left: 10.5%;
+}
+
+.excluir-link {
+    color: #CA0000;
+}
