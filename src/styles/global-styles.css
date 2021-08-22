@@ -6,7 +6,7 @@ body, input, button, textarea {
     font: 400 16px 'Roboto', sans-serif;
 }
 
-button {
+.button {
     padding: 15px;
     margin: 15px;
 
@@ -17,7 +17,7 @@ button {
 
 }
    
-button:active {
+.button:active {
     background: #fff596;
     border: 2px solid rgba(117, 117, 117, 0.5);
 }
