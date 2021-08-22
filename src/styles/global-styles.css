@@ -8,8 +8,7 @@ body, input, button, textarea {
 
 button {
     padding: 15px;
-    margin: 5px;
-    width: 40%;
+    margin: 15px;
 
     background: #FFEE52;
     border: 2px solid rgba(0, 0, 0, 0.5);
@@ -26,7 +25,6 @@ button:active {
 input {
     padding: 15px;
     margin: 15px;
-    width: 95%;
 
     background: #F2F2F2;
     border: 2px solid rgba(0, 0, 0, 0.5);
@@ -35,10 +33,21 @@ input {
     border-radius: 16px;
 }
 
+a {
+    font-size: 20px;
+    line-height: 32px;
+    margin-bottom: 0px;
+    margin-top: 16px;
+    margin-left: 10%;
+    margin-right: 20%;
+    color: #6d6d6d;
+    
+    text-decoration: none;
+}
+
 textarea {
     padding: 15px;
     margin: 15px;
-    width: 95%;
 
     background: #F2F2F2;
     border: 2px solid rgba(0, 0, 0, 0.5);
@@ -50,16 +59,10 @@ textarea {
 
 .cadastro{
     width: 50em;
-    height: 40em;
+    height: auto;
 
     margin: 4% auto 4% auto;
-    margin-left: auto;
-    margin-right: auto;
     padding: 3em;
-
-    align-items: center;
-    display: block;
-
 
     background: #FFFFFF;
     box-shadow: 4px 4px 160px rgba(0, 0, 0, 0.16);
@@ -72,18 +75,13 @@ textarea {
     display: block;
 }
 
-.titulo {
-    margin-left: 32%;
+#titulo {
+    margin-left: 50%;
     margin-right: auto;
+    width: 80%;
+
+    display: flex;
+    
+    justify-content: center;
+    transform: translate(-50%,-50%);
 }
-
-a {
-    font-size: 20px;
-    line-height: 32px;
-    margin-top: 16px;
-    margin-left: 10%;
-    margin-right: 20%;
-    color: #6d6d6d;
-
-    text-decoration: none;
-  }

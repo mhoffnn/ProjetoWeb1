@@ -3,20 +3,23 @@ import '../../../styles/global-styles.css';
 
 import logo from '../../../utf-logo.png';
 
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
-function CadastroEstacionamento(request, response) {
+function EditarEstacionamento(request, response) {
+    let { id_estacionamento } = useParams();
+
     return (
         <div>
             <img src={logo} className="logo-direita" alt="logo" />
             <div class='cadastro' id='cad'>
                 <h1 id='titulo'>
-                    Cadastrar Estacionamento
+                    Editar Estacionamento
                 </h1>
                 <input
                     class='id'
                     type='text'
-                    placeholder='ID'
+                    placeholder={id_estacionamento}
+                    disabled
                 />
                 <l class='atencao'>
                     Atenção! O ID não pode ser alterado
@@ -27,9 +30,9 @@ function CadastroEstacionamento(request, response) {
                     placeholder='Descrição'
                 />
                 <l>
-                    <Link to="/">Já cadastrado</Link>
+                    <Link class='excluir-link' to="/">Excluir</Link>
                 </l>
-                <button id='confirmar-cadastro'>
+                <button id='confirmar'>
                     CONFIRMAR
                 </button>
             </div>
@@ -37,4 +40,4 @@ function CadastroEstacionamento(request, response) {
     );
 }
 
-export default CadastroEstacionamento;
+export default EditarEstacionamento;
