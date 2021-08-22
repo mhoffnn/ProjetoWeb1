@@ -1,0 +1,18 @@
+.cad_name {
+    width: 94%;
+}
+
+input {
+    width: 45%;
+}
+
+.atencao {
+    font-size: 16px;
+    margin: 20px;
+}
+
+#confirmar-cadastro {
+    width: 20em;
+    margin-right: 5%;
+    position: right;
+}
