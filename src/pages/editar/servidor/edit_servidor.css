@@ -1,0 +1,17 @@
+input {
+    width: 45%;
+}
+
+#excluir-link {
+    color: #CA0000;
+}
+
+#small-input {
+    width: 20.5%;
+}
+
+#confirmar {
+    width: 20em;
+    margin-right: 5%;
+    margin-left: 10.5%;
+}

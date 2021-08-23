@@ -1,0 +1,13 @@
+input {
+    width: 45%;
+}
+
+#small-input {
+    width: 20.5%;
+}
+
+#confirmar-cadastro {
+    width: 20em;
+    margin-right: 5%;
+    position: right;
+}
