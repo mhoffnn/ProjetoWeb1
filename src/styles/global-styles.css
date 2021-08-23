@@ -1,0 +1,87 @@
+body {
+    background-color: #FFFDE9;
+}
+
+body, input, button, textarea {
+    font: 400 16px 'Roboto', sans-serif;
+}
+
+.button {
+    padding: 15px;
+    margin: 15px;
+
+    background: #FFEE52;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+
+}
+   
+.button:active {
+    background: #fff596;
+    border: 2px solid rgba(117, 117, 117, 0.5);
+}
+
+input {
+    padding: 15px;
+    margin: 15px;
+
+    background: #F2F2F2;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+}
+
+a {
+    font-size: 20px;
+    line-height: 32px;
+    margin-bottom: 0px;
+    margin-top: 16px;
+    margin-left: 10%;
+    margin-right: 20%;
+    color: #6d6d6d;
+    
+    text-decoration: none;
+}
+
+textarea {
+    padding: 15px;
+    margin: 15px;
+
+    background: #F2F2F2;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    resize: none;
+} 
+
+.cadastro{
+    width: 50em;
+    height: auto;
+
+    margin: 4% auto 4% auto;
+    padding: 3em;
+
+    background: #FFFFFF;
+    box-shadow: 4px 4px 160px rgba(0, 0, 0, 0.16);
+    border-radius: 40px;
+}
+
+.logo-direita{
+    margin: 4% auto 4% 12%;
+    width: 16em;
+    display: block;
+}
+
+#titulo {
+    margin-left: 50%;
+    margin-right: auto;
+    width: 80%;
+
+    display: flex;
+    
+    justify-content: center;
+    transform: translate(-50%,-50%);
+}

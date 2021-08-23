@@ -2,6 +2,7 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Home from './pages/home';
+
 import CadastrarAluno from './pages/cadastro/aluno/cad_aluno.js';
 import EditarAluno from './pages/editar/aluno/edit_aluno.js';
 import CadastrarEstacionamento from './pages/cadastro/estacionamento/cad_estacionamento.js';
