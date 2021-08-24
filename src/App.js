@@ -20,15 +20,15 @@ function App() {
     <DataProvider>
       <Router>
         <Switch>
-          <Route path="/cadastrar_aluno" component={CadastrarAluno} />
-          <Route path="/cadastrar_servidor" component={CadastrarServidor} />
-          <Route path="/cadastrar_visitante" component={CadastrarVisitante} />
-          <Route path="/cadastrar_estacionamento" component={CadastrarEstacionamento} />
+          <Route path="/cadastrar/aluno" component={CadastrarAluno} />
+          <Route path="/cadastrar/servidor" component={CadastrarServidor} />
+          <Route path="/cadastrar/visitante" component={CadastrarVisitante} />
+          <Route path="/cadastrar/estacionamento" component={CadastrarEstacionamento} />
 
-          <Route path="/editar_aluno/:id_aluno" component={EditarAluno} />
-          <Route path="/editar_servidor/:id_servidor" component={EditarServidor} />
-          <Route path="/editar_visitante/:id_visitante" component={EditarVisitante} />
-          <Route path="/editar_estacionamento/:id_estacionamento" component={EditarEstacionamento} />
+          <Route path="/editar/aluno/:id_aluno" component={EditarAluno} />
+          <Route path="/editar/servidor/:id_servidor" component={EditarServidor} />
+          <Route path="/editar/visitante/:id_visitante" component={EditarVisitante} />
+          <Route path="/editar/estacionamento/:id_estacionamento" component={EditarEstacionamento} />
 
           <Route path="/" component={Home} />
         </Switch>
