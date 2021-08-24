@@ -38,6 +38,7 @@ function App() {
             <Route path="/editar/visitante/:id_visitante" component={EditarVisitante} />
             <Route path="/editar/estacionamento/:id_estacionamento" component={EditarEstacionamento} />
 
+            <Route path="/login" component={Login} />
             <Route path="/" component={CadastrarAluno} />
           </Switch>
         </nav>
