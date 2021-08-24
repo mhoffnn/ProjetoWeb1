@@ -3,9 +3,22 @@ import '../../../styles/global-styles.css';
 
 import logo from '../../../utf-logo.png';
 
+import { useState, useContext } from 'react';
+
 import { Link } from 'react-router-dom'
 
+
 function CadastrarAluno(request, response) {
+    const [ name, setName ] = useState(null);
+    
+    function handleName (name) {
+        setName(name);
+    };
+
+    function handleSubmit () {
+        //setData
+    }
+
     return (
         <div>
             <img src={logo} className="logo-direita" alt="logo" />
@@ -13,11 +26,12 @@ function CadastrarAluno(request, response) {
                 <h1 id='titulo'>
                     Cadastrar Aluno
                 </h1>
-                <form>
+                <div>
                     <input
                         class='cad_name'
                         type='text'
                         placeholder='Nome'
+                        onChange={e => handleName(e.target.value)}
                     />
                     <input
                         type='email'
@@ -48,8 +62,9 @@ function CadastrarAluno(request, response) {
                         id='confirmar-cadastro'
                         value='CONFIRMAR'
                         type='submit'
+                        onClick={() => handleSubmit()}
                     />
-                </form>
+                </div>
             </div>
         </div>
     );
