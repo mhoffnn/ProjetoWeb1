@@ -7,16 +7,23 @@ import { useState, useContext } from 'react';
 
 import { Link } from 'react-router-dom'
 
+import { DataContext } from '../../../contexts/data';
+
 
 function CadastrarAluno(request, response) {
     const [ name, setName ] = useState(null);
+    const [ data, setData ] = useContext(DataContext);
     
     function handleName (name) {
         setName(name);
     };
 
     function handleSubmit () {
-        //setData
+        let user = {
+            name
+        };
+
+        setData({ ...data, user });
     }
 
     return (
@@ -26,6 +33,7 @@ function CadastrarAluno(request, response) {
                 <h1 id='titulo'>
                     Cadastrar Aluno
                 </h1>
+                <button onClick={() => alert(data.user.name)}>asdf</button>
                 <div>
                     <input
                         class='cad_name'
