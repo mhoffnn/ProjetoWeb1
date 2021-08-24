@@ -15,7 +15,6 @@ import EditarEstacionamento from './pages/editar/estacionamento/edit_estacioname
 
 import Home from './pages/home';
 
-
 function App() {
   return (
     <DataProvider>
@@ -35,6 +34,7 @@ function App() {
         </Switch>
       </Router>
     </DataProvider>
+
   );
 }
 
