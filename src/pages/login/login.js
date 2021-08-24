@@ -24,15 +24,16 @@ function Login(request, response) {
                         type='password'
                         placeholder='Senha'
                     />
-                    <l>
-                        <Link to="/cadastrar/visitante">Cadastrar</Link>
-                    </l>
                     <input
                         class='button'
-                        id='confirmar'
+                        id='unique'
                         value='CONFIRMAR'
                         type='submit'
                     />
+                    <l id='call-me'>
+                        <Link to="/cadastrar/senha">Esqueci minha senha</Link>
+                        <Link to="/cadastrar/visitante">Realizar cadastro</Link>
+                    </l>
                 </div>
             </div>
         </div>
