@@ -1,9 +1,9 @@
-.cad_name {
-    width: 94%;
-}
-
 input {
     width: 45%;
+}
+
+#large-input {
+    width: 95.5%;
 }
 
 #confirmar-cadastro {

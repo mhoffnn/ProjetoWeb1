@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Home from './pages/home';
 
+import CadastrarVeiculo from './pages/cadastro/veiculo/cad_veiculo';
+import EditarVeiculo from './pages/editar/veiculo/edit_veiculo';
 import CadastrarServidor from './pages/cadastro/servidor/cad_servidor';
 import EditarServidor from './pages/editar/servidor/edit_servidor';
 import CadastrarAluno from './pages/cadastro/aluno/cad_aluno.js';
@@ -17,6 +19,8 @@ function App() {
   return (
     <Router>
       <Switch>
+        <Route path="/cadastrar/veiculo" component={CadastrarVeiculo} />
+        <Route path="/editar/veiculo/:id_veiculo" component={EditarVeiculo} />
         <Route path="/cadastrar_servidor" component={CadastrarServidor} />
         <Route path="/editar_servidor/:id_servidor" component={EditarServidor} />
         <Route path="/cadastrar_aluno" component={CadastrarAluno} />
