@@ -30,11 +30,13 @@ function App() {
 
           <Switch>
             <Route path="/cadastrar/aluno" component={CadastrarAluno} />
+            <Route path="/cadastrar/veiculo" component={CadastrarVeiculo} />
             <Route path="/cadastrar/servidor" component={CadastrarServidor} />
             <Route path="/cadastrar/visitante" component={CadastrarVisitante} />
             <Route path="/cadastrar/estacionamento" component={CadastrarEstacionamento} />
 
             <Route path="/editar/aluno/:id_aluno" component={EditarAluno} />
+            <Route path="/editar/veiculo/:id_veiculo" component={CadastrarVeiculo} />
             <Route path="/editar/servidor/:id_servidor" component={EditarServidor} />
             <Route path="/editar/visitante/:id_visitante" component={EditarVisitante} />
             <Route path="/editar/estacionamento/:id_estacionamento" component={EditarEstacionamento} />
