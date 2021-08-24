@@ -1,6 +1,5 @@
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
 import { DataProvider } from './contexts/data';
 
 import CadastrarAluno from './pages/cadastro/aluno/cad_aluno.js';
@@ -19,19 +18,27 @@ function App() {
   return (
     <DataProvider>
       <Router>
-        <Switch>
-          <Route path="/cadastrar/aluno" component={CadastrarAluno} />
-          <Route path="/cadastrar/servidor" component={CadastrarServidor} />
-          <Route path="/cadastrar/visitante" component={CadastrarVisitante} />
-          <Route path="/cadastrar/estacionamento" component={CadastrarEstacionamento} />
+        <nav class='navbar-nav navbar-expand-lg navbar-light bg-light'>
+          <span class='navbar-brand'>Cadastros: </span>
+          <a class='navbar-text' href='/cadastrar/aluno'>Aluno</a>
+          <a class='navbar-text' href='/cadastrar/servidor'>Servidor</a>
+          <a class='navbar-text' href='/cadastrar/visitante'>Visitante</a>
+          <a class='navbar-text' href='/cadastrar/estacionamento'>Estacionamento</a>
 
-          <Route path="/editar/aluno/:id_aluno" component={EditarAluno} />
-          <Route path="/editar/servidor/:id_servidor" component={EditarServidor} />
-          <Route path="/editar/visitante/:id_visitante" component={EditarVisitante} />
-          <Route path="/editar/estacionamento/:id_estacionamento" component={EditarEstacionamento} />
+          <Switch>
+            <Route path="/cadastrar/aluno" component={CadastrarAluno} />
+            <Route path="/cadastrar/servidor" component={CadastrarServidor} />
+            <Route path="/cadastrar/visitante" component={CadastrarVisitante} />
+            <Route path="/cadastrar/estacionamento" component={CadastrarEstacionamento} />
 
-          <Route path="/" component={Home} />
-        </Switch>
+            <Route path="/editar/aluno/:id_aluno" component={EditarAluno} />
+            <Route path="/editar/servidor/:id_servidor" component={EditarServidor} />
+            <Route path="/editar/visitante/:id_visitante" component={EditarVisitante} />
+            <Route path="/editar/estacionamento/:id_estacionamento" component={EditarEstacionamento} />
+
+            <Route path="/" component={CadastrarAluno} />
+          </Switch>
+        </nav>
       </Router>
     </DataProvider>
 
