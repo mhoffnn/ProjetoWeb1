@@ -8,6 +8,7 @@ import CadastrarServidor from './pages/cadastro/servidor/cad_servidor';
 import CadastrarVisitante from './pages/cadastro/vizitante/cad_visitante';
 import CadastrarEstacionamento from './pages/cadastro/estacionamento/cad_estacionamento.js';
 
+import EditarSenha from './pages/editar/senha/edit_senha';
 import EditarAluno from './pages/editar/aluno/edit_aluno.js';
 import EditarVeiculo from './pages/editar/veiculo/edit_veiculo';
 import EditarServidor from './pages/editar/servidor/edit_servidor';
@@ -42,6 +43,9 @@ function App() {
             <Route path="/editar/servidor/:id_servidor" component={EditarServidor} />
             <Route path="/editar/visitante/:id_visitante" component={EditarVisitante} />
             <Route path="/editar/estacionamento/:id_estacionamento" component={EditarEstacionamento} />
+
+            <Route path="/cadastrar/senha/:id_session" component={CadastrarSenha} />
+            <Route path="/editar/senha/:id_session" component={EditarSenha} />
 
             <Route path="/login" component={Login} />
             <Route path="/" component={CadastrarAluno} />
