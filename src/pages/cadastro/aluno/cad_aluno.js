@@ -11,14 +11,14 @@ import { DataContext } from '../../../contexts/data';
 
 
 function CadastrarAluno(request, response) {
-    const [ name, setName ] = useState(null);
-    const [ data, setData ] = useContext(DataContext);
-    
-    function handleName (name) {
+    const [name, setName] = useState(null);
+    const [data, setData] = useContext(DataContext);
+
+    function handleName(name) {
         setName(name);
     };
 
-    function handleSubmit () {
+    function handleSubmit() {
         let user = {
             name
         };
@@ -29,7 +29,7 @@ function CadastrarAluno(request, response) {
     return (
         <div>
             <img src={logo} className="logo-direita" alt="logo" />
-            <div class='cadastro' id='cad'>
+            <div id='cadastro'>
                 <h1 id='titulo'>
                     Cadastrar Aluno
                 </h1>
@@ -65,13 +65,13 @@ function CadastrarAluno(request, response) {
                     <l>
                         <Link to="/">Já cadastrado</Link>
                     </l>
-                    <input
-                        class='button'
+                    <button
                         id='confirmar-cadastro'
-                        value='CONFIRMAR'
                         type='submit'
                         onClick={() => handleSubmit()}
-                    />
+                    >
+                        CONFIRMAR
+                    </button>
                 </div>
             </div>
         </div>

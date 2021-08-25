@@ -8,7 +8,7 @@ function BuscarUsuario(request, response) {
     return (
         <div>
             <img src={logo} className="logo-direita" alt="logo" />
-            <div class='cadastro' id='cad'>
+            <div id='cadastro'>
                 <h1 id='titulo'>
                     Buscar usuário
                 </h1>
@@ -19,7 +19,6 @@ function BuscarUsuario(request, response) {
                         placeholder='Placa do Veículo'
                     />
                     <input
-                        class='button'
                         id='unique'
                         value='CONFIRMAR'
                         type='submit'

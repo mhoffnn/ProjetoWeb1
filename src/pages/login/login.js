@@ -9,7 +9,7 @@ function Login(request, response) {
     return (
         <div>
             <img src={logo} className="logo-direita" alt="logo" />
-            <div class='cadastro' id='cad'>
+            <div id='cadastro'>
                 <h1 id='titulo'>
                     Entrar
                 </h1>
@@ -24,12 +24,13 @@ function Login(request, response) {
                         type='password'
                         placeholder='Senha'
                     />
-                    <input
-                        class='button'
+                    <button
                         id='unique'
                         value='CONFIRMAR'
                         type='submit'
-                    />
+                    >
+                        CONFIRMAR
+                    </button>
                     <l id='call-me'>
                         <Link to="/cadastrar/senha">Esqueci minha senha</Link>
                         <Link to="/cadastrar/visitante">Realizar cadastro</Link>

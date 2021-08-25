@@ -7,7 +7,7 @@ function CadastrarSenha(request, response) {
     return (
         <div>
             <img src={logo} className="logo-direita" alt="logo" />
-            <div class='cadastro' id='cad'>
+            <div id='cadastro'>
                 <h1 id='titulo'>
                     Cadastrar Nova Senha
                 </h1>
@@ -22,12 +22,13 @@ function CadastrarSenha(request, response) {
                         type='email'
                         placeholder='Repita a senha'
                     />
-                    <input
-                        class='button'
+                    <button
                         id='confirmar-cadastro'
                         value='CONFIRMAR'
                         type='submit'
-                    />
+                    >
+                        CONFIRMAR
+                    </button>
                 </div>
             </div>
         </div>

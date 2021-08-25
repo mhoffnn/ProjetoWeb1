@@ -1,40 +1,63 @@
 body {
-    background-color: #FFFDE9;
+    background-color: #FFFDE9 !important;
 }
 
-body, input, button, textarea {
+body, input, button, textarea, nav, #link {
     font: 400 16px 'Roboto', sans-serif;
 }
 
-.button {
+nav {
     padding: 15px;
-    margin: 15px;
-    margin-top: 5%;
+    padding-left: 5em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-left: auto;
+    margin-right: auto;
 
-    background: #FFEE52;
+    font: 32px;
+
+    background: #fff59a;
     border: 2px solid rgba(0, 0, 0, 0.5);
     box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.08);
     border-radius: 16px;
 
 }
+
+.navbar-text {
+    width: 50%;
+    text-decoration: none;
+}
+
+button {
+    padding: 15px;
+    margin: 15px;
+    margin-top: 5% !important;
+    margin-left: 5% !important;
+
+    background: #FFEE52;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 16px !important;
+}
    
-.button:active {
+button:active {
     background: #fff596;
     border: 2px solid rgba(117, 117, 117, 0.5);
 }
 
 input {
     padding: 15px;
-    margin: 15px;
+    margin-top: 2em !important;
+    margin-right: 4% !important;
+    margin-left: 4% !important;
 
     background: #F2F2F2;
     border: 2px solid rgba(0, 0, 0, 0.5);
-    box-sizing: border-box;
     box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.08);
     border-radius: 16px;
 }
 
-a {
+.a {
     font-size: 20px;
     line-height: 32px;
     margin-bottom: 0px;
@@ -49,7 +72,7 @@ a {
 textarea {
     padding: 15px;
     margin: 15px;
-
+    
     background: #F2F2F2;
     border: 2px solid rgba(0, 0, 0, 0.5);
     box-sizing: border-box;
@@ -58,31 +81,71 @@ textarea {
     resize: none;
 } 
 
-.cadastro{
-    width: 50em;
+#cadastro{
+    width: 90%;
     height: auto;
-
+    
     margin: 4% auto 4% auto;
-    padding: 3em;
-
+    padding: 3em !important;
+    padding-right: 4em !important;
+    
     background: #FFFFFF;
     box-shadow: 4px 4px 160px rgba(0, 0, 0, 0.16);
     border-radius: 40px;
 }
 
-.logo-direita{
-    margin: 4% auto 4% 12%;
-    width: 16em;
+#navbar{
+    width: 20em;
+    height: auto;
+    padding-left: 2em !important;
+    padding-right: 5% !important;
+
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    box-shadow: 4px 4px 160px rgba(0, 0, 0, 0.16);
+    border-radius: 32px;
+}
+
+.row {
+    width: 100%;
+    padding-left: 5%;
+}
+
+#logo-direita{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 20em;
     display: block;
 }
 
 #titulo {
     margin-left: 50%;
-    margin-right: auto;
-    width: 80%;
-
+    width: 150%;
+    
     display: flex;
     
     justify-content: center;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,0);
+}
+
+#link {
+    margin-left: 25%;
+    margin-right: 10%;
+    width: 90%;
+    
+    justify-content: center;
+    transform: translate(-50%,0);
+    text-decoration: none;
+    color: #6d6d6d;
+}
+
+l {
+    margin-top: 7% !important;
+    margin-bottom: 2% !important;
+    margin-right: 10em !important;
 }

@@ -9,7 +9,7 @@ function CadastrarVeiculo(request, response) {
     return (
         <div>
             <img src={logo} className="logo-direita" alt="logo" />
-            <div class='cadastro' id='cad'>
+            <div id='cadastro'>
                 <h1 id='titulo'>
                     Cadastrar Veiculo
                 </h1>
@@ -38,12 +38,13 @@ function CadastrarVeiculo(request, response) {
                     <l>
                         <Link to="/">Já cadastrado</Link>
                     </l>
-                    <input
-                        class='button'
+                    <button
                         id='confirmar-cadastro'
                         value='CONFIRMAR'
                         type='submit'
-                    />
+                    >
+                        CONFIRMAR
+                    </button>
                 </div>
             </div>
         </div>
