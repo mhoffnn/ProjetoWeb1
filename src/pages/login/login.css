@@ -1,0 +1,14 @@
+#unique {
+    width: 60%;
+    margin-left: 50%;
+    margin-right: auto;
+    
+    transform: translate(-50%, 0);
+}
+
+#call-me{
+    margin-left: 11%;
+    margin-right: auto;
+        
+    transform: translate(-50%,0);
+}

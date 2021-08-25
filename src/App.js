@@ -14,6 +14,7 @@ import EditarServidor from './pages/editar/servidor/edit_servidor';
 import EditarVisitante from './pages/editar/vizitante/edit_visitante';
 import EditarEstacionamento from './pages/editar/estacionamento/edit_estacionamento.js';
 
+import Login from './pages/login/login.js';
 import Home from './pages/home';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
 
     <DataProvider>
       <Router>
+
         <nav class='navbar-nav navbar-expand-lg navbar-light bg-light'>
           <span class='navbar-brand'>Cadastros: </span>
           <a class='navbar-text' href='/cadastrar/aluno'>Aluno</a>
@@ -41,6 +43,7 @@ function App() {
             <Route path="/editar/visitante/:id_visitante" component={EditarVisitante} />
             <Route path="/editar/estacionamento/:id_estacionamento" component={EditarEstacionamento} />
 
+            <Route path="/login" component={Login} />
             <Route path="/" component={CadastrarAluno} />
           </Switch>
         </nav>
