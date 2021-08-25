@@ -17,6 +17,7 @@ import EditarVisitante from './pages/editar/vizitante/edit_visitante';
 import EditarEstacionamento from './pages/editar/estacionamento/edit_estacionamento.js';
 
 import AssociarVeiculo from './pages/associar_veiculo/associ_veiculo';
+import BuscarUsuario from './pages/buscar_usuario/buscar_usuario';
 import Login from './pages/login/login.js';
 import Home from './pages/home';
 
@@ -49,6 +50,7 @@ function App() {
             <Route path="/cadastrar/senha/:id_session" component={CadastrarSenha} />
             <Route path="/editar/senha/:id_session" component={EditarSenha} />
 
+            <Route path="/buscarusuario" component={BuscarUsuario} />
             <Route path="/associarveiculo/:id_session" component={AssociarVeiculo} />
             <Route path="/login" component={Login} />
             <Route path="/" component={CadastrarAluno} />
