@@ -2,6 +2,7 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { DataProvider } from './contexts/data';
 
+import CadastrarSenha from './pages/cadastro/senha/cad_senha';
 import CadastrarAluno from './pages/cadastro/aluno/cad_aluno.js';
 import CadastrarVeiculo from './pages/cadastro/veiculo/cad_veiculo';
 import CadastrarServidor from './pages/cadastro/servidor/cad_servidor';
@@ -15,6 +16,7 @@ import EditarServidor from './pages/editar/servidor/edit_servidor';
 import EditarVisitante from './pages/editar/vizitante/edit_visitante';
 import EditarEstacionamento from './pages/editar/estacionamento/edit_estacionamento.js';
 
+import AssociarVeiculo from './pages/associar_veiculo/associ_veiculo';
 import Login from './pages/login/login.js';
 import Home from './pages/home';
 
@@ -47,6 +49,7 @@ function App() {
             <Route path="/cadastrar/senha/:id_session" component={CadastrarSenha} />
             <Route path="/editar/senha/:id_session" component={EditarSenha} />
 
+            <Route path="/associarveiculo/:id_session" component={AssociarVeiculo} />
             <Route path="/login" component={Login} />
             <Route path="/" component={CadastrarAluno} />
           </Switch>

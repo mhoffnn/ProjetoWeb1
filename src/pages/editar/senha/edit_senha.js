@@ -1,4 +1,4 @@
-import './edit _senha.css';
+import './edit_senha.css';
 import '../../../styles/global-styles.css';
 
 import logo from '../../../utf-logo.png';
