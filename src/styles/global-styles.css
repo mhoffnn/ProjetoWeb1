@@ -2,7 +2,7 @@ body {
     background-color: #FFFDE9 !important;
 }
 
-body, input, button, textarea, nav, #link {
+body, input, button, textarea, nav, #link, #link-login {
     font: 400 16px 'Roboto', sans-serif;
 }
 
@@ -136,6 +136,14 @@ textarea {
     transform: translate(-50%,0);
     text-decoration: none;
     color: #6d6d6d;
+}
+
+#link-login{
+    margin-left: 5%;
+
+    text-decoration: none;
+    color: #6d6d6d;
+
 }
 
 l {

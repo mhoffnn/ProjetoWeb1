@@ -1,4 +1,3 @@
-import './cad_senha.css';
 import '../../../styles/global-styles.css';
 
 import logo from '../../../utf-logo.png';
@@ -27,20 +26,19 @@ function CadastrarSenha(request, response) {
                 <h1 id='titulo'>
                     Cadastrar Nova Senha
                 </h1>
-                <div>
+                <div class='row'>
                     <input
-                        class='col-11'
+                        class='col-md-11'
                         type='password'
                         placeholder='Nova Senha'
                     />
                     <input
-                        class='col-11'
+                        class='col-md-11'
                         type='password'
                         placeholder='Repita a senha'
                     />
                     <button
-                        id='central'
-                        class='col-md-3'
+                        class='col-md-6'
                         value='CONFIRMAR'
                         type='submit'
                     >
