@@ -1,4 +1,3 @@
-import './cad_servidor.css';
 import '../../../styles/global-styles.css';
 
 import logo from '../../../utf-logo.png';
@@ -36,40 +35,40 @@ function CadastrarServidor(request, response) {
                         placeholder='Nome'
                     />
                     <input
-                        class='col-sm-5'
+                        class='col-md-5'
                         type='email'
                         placeholder='e-mail'
                     />
                     <input
-                        class='col-sm-5'
+                        class='col-md-5'
                         type='text'
                         placeholder='Telefone'
                     />
                     <input
-                        class='col-sm-5'
+                        class='col-md-5'
                         type='text'
                         placeholder='Nº Matricula'
                     />
                     <input
-                        class='col-sm-5'
+                        class='col-md-5'
                         type='text'
                         placeholder='Cargo'
                     />
                     <input
-                        class='col-sm-2'
+                        class='col-md-2'
                         type='text'
                         placeholder='Ramal'
                     />
                     <input
-                        class='col-sm-2'
+                        class='col-md-2'
                         type='text'
                         placeholder='Sala'
                     />
-                    <l class='col-sm-5'>
+                    <l class='col-md-3'>
                         <Link id='link' to="/">Já cadastrado</Link>
                     </l>
                     <button
-                        class='col-md-3'
+                        class='col-md-4'
                         value='CONFIRMAR'
                         type='submit'
                     >

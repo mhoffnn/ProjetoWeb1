@@ -2,7 +2,9 @@ import '../../../styles/global-styles.css';
 
 import logo from '../../../utf-logo.png';
 
-function CadastrarSenha(request, response) {
+import { Link } from 'react-router-dom'
+
+function HomeAdm(request, response) {
     return (
         <div>
             <div class='row'>
@@ -20,34 +22,11 @@ function CadastrarSenha(request, response) {
                     <a class='navbar-text' href='/cadastrar/visitante'>Visitante</a>
                     <a class='navbar-text' href='/cadastrar/estacionamento'>Estacionamento</a>
                 </nav>
-            </div>
 
-            <div class="container" id='cadastro'>
-                <h1 id='titulo'>
-                    Cadastrar Nova Senha
-                </h1>
-                <div class='row'>
-                    <input
-                        class='col-md-11'
-                        type='password'
-                        placeholder='Nova Senha'
-                    />
-                    <input
-                        class='col-md-11'
-                        type='password'
-                        placeholder='Repita a senha'
-                    />
-                    <button
-                        class='col-md-6'
-                        value='CONFIRMAR'
-                        type='submit'
-                    >
-                        CONFIRMAR
-                    </button>
-                </div>
+
             </div>
         </div>
     );
 }
 
-export default CadastrarSenha;
+export default HomeAdm;

@@ -1,15 +1,4 @@
-.id {
-    width: 30%;
-}
-
-.atencao {
+#atencao {
     font-size: 16px;
-    margin: 20px;
-}
-
-#confirmar-cadastro {
-    width: 20em;
-    margin-right: 5%;
-    margin-left: 25%;
-    position: right;
+    margin-top: auto !important;
 }

@@ -2,7 +2,7 @@ body {
     background-color: #FFFDE9 !important;
 }
 
-body, input, button, textarea, nav, #link {
+body, input, button, textarea, nav, #link, #link-login {
     font: 400 16px 'Roboto', sans-serif;
 }
 
@@ -45,7 +45,7 @@ button:active {
     border: 2px solid rgba(117, 117, 117, 0.5);
 }
 
-input {
+input, textarea {
     padding: 15px;
     margin-top: 2em !important;
     margin-right: 4% !important;
@@ -70,14 +70,6 @@ input {
 }
 
 textarea {
-    padding: 15px;
-    margin: 15px;
-    
-    background: #F2F2F2;
-    border: 2px solid rgba(0, 0, 0, 0.5);
-    box-sizing: border-box;
-    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.08);
-    border-radius: 16px;
     resize: none;
 } 
 
@@ -124,7 +116,7 @@ textarea {
 }
 
 #titulo {
-    margin-left: 50%;
+    margin-left: 52%;
     width: 150%;
     
     display: flex;
@@ -134,14 +126,24 @@ textarea {
 }
 
 #link {
-    margin-left: 25%;
+    margin-left: 35%;
     margin-right: 10%;
+    margin-top: 5em;
+    margin-bottom: 5em;
     width: 90%;
     
     justify-content: center;
     transform: translate(-50%,0);
     text-decoration: none;
     color: #6d6d6d;
+}
+
+#link-login{
+    margin-left: 5%;
+
+    text-decoration: none;
+    color: #6d6d6d;
+
 }
 
 l {
