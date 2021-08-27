@@ -17,15 +17,15 @@ function CadastrarEstacionamento(request, response) {
 
     function onConfirm() {
         let parkingLots = data.parkingLots;
-                
+
         parkingLots.push({
             id,
             description: desc
         })
 
-        setData({...data, parkingLots });
+        setData({ ...data, parkingLots });
 
-        alert('Registro adicionado com sucesso!');        
+        alert('Registro adicionado com sucesso!');
         history.push('/ADM/1');
     }
 
@@ -48,7 +48,7 @@ function CadastrarEstacionamento(request, response) {
                     <a class='navbar-text' href='/cadastrar/veiculo'>Veiculo</a>
                     <a class='navbar-text' href='/cadastrar/servidor'>Servidor</a>
                     <a class='navbar-text' href='/cadastrar/visitante'>Visitante</a>
-                    <a class='navbar-text' href='/cadastrar/estacionamento'>Estacionamento</a>
+                    <a class='navbar-text' href='/lista/itenscadastrados'>Itens Cadastrados</a>
                 </nav>
             </div>
 

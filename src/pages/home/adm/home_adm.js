@@ -27,6 +27,7 @@ function HomeAdm(request, response) {
                     <a class='navbar-text' href='/cadastrar/servidor'>Servidor</a>
                     <a class='navbar-text' href='/cadastrar/visitante'>Visitante</a>
                     <a class='navbar-text' href='/cadastrar/estacionamento'>Estacionamento</a>
+                    <a class='navbar-text' href='/lista/itenscadastrados'>Itens Cadastrados</a>
                 </nav>
             </div>
 
