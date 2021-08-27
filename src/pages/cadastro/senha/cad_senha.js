@@ -2,7 +2,16 @@ import '../../../styles/global-styles.css';
 
 import logo from '../../../utf-logo.png';
 
+import { useHistory } from 'react-router-dom';
+
 function CadastrarSenha(request, response) {
+
+    const history = useHistory();
+
+    function onConfirm() {
+        history.push('/ADM/id_servidor');
+    }
+
     return (
         <div>
             <div class='row'>
@@ -31,7 +40,7 @@ function CadastrarSenha(request, response) {
                     <button
                         class='col-md-6'
                         value='CONFIRMAR'
-                        type='submit'
+                        onClick={() => onConfirm()}
                     >
                         CONFIRMAR
                     </button>

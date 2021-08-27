@@ -4,7 +4,7 @@ import logo from '../../../utf-logo.png';
 
 import { useState, useContext } from 'react';
 
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 
 import { DataContext } from '../../../contexts/data';
 
@@ -13,8 +13,9 @@ function CadastrarAluno(request, response) {
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
     const [ra, setRa] = useState('');
-    const [grad, setGrad] = useState(''); 
+    const [grad, setGrad] = useState('');
     const [data, setData] = useContext(DataContext);
+    const history = useHistory();
 
     function handleSubmit() {
         let students = data.students;
@@ -27,6 +28,7 @@ function CadastrarAluno(request, response) {
         })
 
         setData({ ...data, students });
+        history.push('/cadastrar/senha/id_aluno');
     }
 
     return (
@@ -39,8 +41,9 @@ function CadastrarAluno(request, response) {
                 />
 
                 <nav id='navbar' class='col-sm-3 navbar-nav navbar-expand-lg navbar-light'>
+                    <a class='navbar-brand' href='/ADM/id_servidor'>Home</a>
+                    <a class='navbar-brand' href='/buscarusuario'>Buscar Usuario</a>
                     <span class='navbar-brand'>Cadastrar: </span>
-                    <a class='navbar-text' href='/cadastrar/aluno'>Aluno</a>
                     <a class='navbar-text' href='/cadastrar/veiculo'>Veiculo</a>
                     <a class='navbar-text' href='/cadastrar/servidor'>Servidor</a>
                     <a class='navbar-text' href='/cadastrar/visitante'>Visitante</a>

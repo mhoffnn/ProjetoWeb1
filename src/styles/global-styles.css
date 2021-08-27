@@ -151,7 +151,14 @@ textarea {
     color: #6d6d6d;
 }
 
-#link-login{
+#button-confirm{
+    text-decoration: none;
+    color: #6d6d6d;
+    width: 40em;
+    
+}
+
+#link-login {
     margin-left: 5%;
 
     text-decoration: none;

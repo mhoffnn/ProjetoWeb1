@@ -18,6 +18,7 @@ function ItensCadastrados(request, response) {
                 />
 
                 <nav id='navbar' class='col-sm-3 navbar-nav navbar-expand-lg navbar-light'>
+                    <a class='navbar-brand' href='/ADM/id_servidor'>Home</a>
                     <span class='navbar-brand'>Cadastrar: </span>
                     <a class='navbar-text' href='/cadastrar/aluno'>Aluno</a>
                     <a class='navbar-text' href='/cadastrar/veiculo'>Veiculo</a>
@@ -34,6 +35,7 @@ function ItensCadastrados(request, response) {
                         <tr>
                             <th scope='col'>Cod.</th>
                             <th scope='col'>Descrição</th>
+                            <th scope='col'></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -42,7 +44,9 @@ function ItensCadastrados(request, response) {
                                 return (
                                     <tr>
                                         <th scope='row'>{pl.id}</th>
-                                        <td>{pl.description}</td>
+                                        <td>{pl.description}</td>                                        <td>
+                                            <a id='link-login' href='/editar/estacionamento/id_estacionamento'>Editar</a>
+                                        </td>
                                     </tr>
                                 )
                             })
@@ -63,19 +67,23 @@ function ItensCadastrados(request, response) {
                             <th scope='col'>Fabricante</th>
                             <th scope='col'>Cor</th>
                             <th scope='col'>Placa</th>
+                            <th scope='col'></th>
                         </tr>
                     </thead>
                     <tbody>
                         {
                             data.cars.map(c => {
                                 return (
-                                    <tr>
+                                    <tr >
                                         <th scope='row'>{c.id}</th>
                                         <td>{c.type}</td>
                                         <td>{c.model}</td>
                                         <td>{c.factory}</td>
                                         <td>{c.color}</td>
                                         <td>{c.plate}</td>
+                                        <td>
+                                            <a id='link-login' href='/editar/veiculo/id_veiculo'>Editar</a>
+                                        </td>
                                     </tr>
                                 )
                             })
