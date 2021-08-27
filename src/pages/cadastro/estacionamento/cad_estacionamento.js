@@ -4,8 +4,33 @@ import '../../../styles/global-styles.css';
 import logo from '../../../utf-logo.png';
 
 import { Link } from 'react-router-dom'
+import { useContext, useEffect, useState } from 'react';
+import { DataContext } from '../../../contexts/data';
+
+import Helper from '../../../helpers/general';
 
 function CadastrarEstacionamento(request, response) {
+    const [desc, setDesc] = useState();
+    const [id, setId] = useState();
+    const [data, setData] = useContext(DataContext);
+
+    function onConfirm() {
+        let parkingLots = data.parkingLots;
+                
+        parkingLots.push({
+            id,
+            description: desc
+        })
+
+        setData({...data, parkingLots });
+
+        alert('Registro adicionado com sucesso!');
+    }
+
+    useEffect(() => {
+        setId(Helper.getNextId(data.parkingLots));
+    })
+
     return (
         <div>
             <img src={logo} className="logo-direita" alt="logo" />
@@ -13,11 +38,11 @@ function CadastrarEstacionamento(request, response) {
                 <h1 id='titulo'>
                     Cadastrar Estacionamento
                 </h1>
-                <form>
+                <div>
                     <input
                         class='id'
                         type='text'
-                        placeholder='ID'
+                        placeholder={id}
                     />
                     <l class='atencao'>
                         Atenção! O ID não pode ser alterado
@@ -26,6 +51,7 @@ function CadastrarEstacionamento(request, response) {
                         class='desc'
                         type='text'
                         placeholder='Descrição'
+                        onChange={e => setDesc(e.target.value)}
                     />
                     <l>
                         <Link to="/">Já cadastrado</Link>
@@ -33,11 +59,11 @@ function CadastrarEstacionamento(request, response) {
                     <button
                         id='confirmar-cadastro'
                         value='CONFIRMAR'
-                        type='submit'
+                        onClick={() => onConfirm()}
                     >
                         CONFIRMAR
                     </button>
-                </form>
+                </div>
             </div>
         </div>
     );
