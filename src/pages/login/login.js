@@ -3,8 +3,26 @@ import '../../styles/global-styles.css';
 import logo from '../../utf-logo.png';
 
 import { Link } from 'react-router-dom'
+import { useContext, useState } from 'react';
+
+import { DataContext } from '../../contexts/data';
 
 function Login(request, response) {
+    const [ name, setName ] = useState('');
+    const [ passwd, setPasswd ] = useState('');
+    const [ data, setData ] = useContext(DataContext);
+
+    function handleConfirm () {
+        setData({
+            ...data,
+            user: {
+                ...data.user,
+                name,
+                passwd
+            }
+        })
+    }
+
     return (
         <div>
             <div class='row'>
@@ -33,16 +51,19 @@ function Login(request, response) {
                         class='col-md-11'
                         type='text'
                         placeholder='Nome'
+                        onChange={e => setName(e.target.value)}
                     />
                     <input
                         class='col-md-11'
                         type='password'
                         placeholder='Senha'
+                        onChange={e => setPasswd(e.target.value)}
                     />
                     <button
                         class='col-md-11'
                         value='CONFIRMAR'
                         type='submit'
+                        onClick={() => handleConfirm()}
                     >
                         CONFIRMAR
                     </button>

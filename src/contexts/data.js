@@ -12,7 +12,35 @@ export let setData;
 export class DataModel {
   constructor(...args) {
     const properties = {
-      user: {},
+      user: {
+        id: null,
+        name: null,
+        doc: null
+      },
+      students: [
+        {
+          id: null,
+          name: null,
+          email: null
+        }
+      ],
+      parkingLots: [
+        {
+          id: null,
+          description: null
+        }
+      ],
+      cars: [
+        {
+          id: null,
+          type: null,
+          model: null,
+          factory: null,
+          color: null,
+          plate: null
+        }
+      ],
+      test: 'test',
       ...args[0],
     };
     Object.keys(properties).forEach((key) => {
