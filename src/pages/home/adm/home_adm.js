@@ -3,9 +3,12 @@ import '../../../styles/global-styles.css';
 import logo from '../../../utf-logo.png';
 import estacionamento from '../../../estacionamento-utfpr.png';
 
-import { Link } from 'react-router-dom'
+import { useContext } from 'react';
+import { DataContext } from '../../../contexts/data'
 
 function HomeAdm(request, response) {
+    const [data] = useContext(DataContext);
+
     return (
         <div>
             <div class='row'>
@@ -16,6 +19,8 @@ function HomeAdm(request, response) {
                 />
 
                 <nav id='navbar' class='col-sm-3 navbar-nav navbar-expand-lg navbar-light'>
+                    <a class='navbar-brand' href='/lista/itenscadastrados'>Itens Cadastrados</a>
+                    <a class='navbar-brand' href='/buscarusuario'>Buscar Usuario</a>
                     <span class='navbar-brand'>Cadastrar: </span>
                     <a class='navbar-text' href='/cadastrar/aluno'>Aluno</a>
                     <a class='navbar-text' href='/cadastrar/veiculo'>Veiculo</a>
@@ -29,9 +34,11 @@ function HomeAdm(request, response) {
                 <h1 id='titulo'>Registrar Ocorrência</h1>
                 <img src={estacionamento} id="map-image" width='906px' max-width='100%' height='auto' alt="a" usemap="#map" />
                 <map name="map">
-                    <area shape="rect" coords="340, 404, 883, 709" href='/ADM/c3' />
-                    <area shape="rect" coords="339, 98, 883, 403" href='/ADM/b2' />
-                    <area shape="rect" coords="31, 100, 337, 706" href='/ADM/a1' />
+
+                    <area shape="rect" coords="31, 100, 337, 706" href='/cadastrar/ocorrencia/A1' />
+                    <area shape="rect" coords="339, 98, 883, 403" href='/cadastrar/ocorrencia/B2' />
+                    <area shape="rect" coords="340, 404, 883, 709" href='/cadastrar/ocorrencia/C3' />
+
                 </map>
             </div>
         </div>

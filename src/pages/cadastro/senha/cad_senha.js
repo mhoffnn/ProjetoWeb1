@@ -2,7 +2,16 @@ import '../../../styles/global-styles.css';
 
 import logo from '../../../utf-logo.png';
 
+import { useHistory } from 'react-router-dom';
+
 function CadastrarSenha(request, response) {
+
+    const history = useHistory();
+
+    function onConfirm() {
+        history.push('/ADM/id_servidor');
+    }
+
     return (
         <div>
             <div class='row'>
@@ -11,15 +20,6 @@ function CadastrarSenha(request, response) {
                     id="logo-direita"
                     alt="logo"
                 />
-
-                <nav id='navbar' class='col-sm-3 navbar-nav navbar-expand-lg navbar-light'>
-                    <span class='navbar-brand'>Cadastrar: </span>
-                    <a class='navbar-text' href='/cadastrar/aluno'>Aluno</a>
-                    <a class='navbar-text' href='/cadastrar/veiculo'>Veiculo</a>
-                    <a class='navbar-text' href='/cadastrar/servidor'>Servidor</a>
-                    <a class='navbar-text' href='/cadastrar/visitante'>Visitante</a>
-                    <a class='navbar-text' href='/cadastrar/estacionamento'>Estacionamento</a>
-                </nav>
             </div>
 
             <div class="container" id='cadastro'>
@@ -40,7 +40,7 @@ function CadastrarSenha(request, response) {
                     <button
                         class='col-md-6'
                         value='CONFIRMAR'
-                        type='submit'
+                        onClick={() => onConfirm()}
                     >
                         CONFIRMAR
                     </button>

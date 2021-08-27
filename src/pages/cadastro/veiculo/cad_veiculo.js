@@ -3,9 +3,42 @@ import '../../../styles/global-styles.css';
 
 import logo from '../../../utf-logo.png';
 
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
+import { useContext, useEffect, useState } from 'react';
+import { DataContext } from '../../../contexts/data';
+import Helper from '../../../helpers/general';
 
 function CadastrarVeiculo(request, response) {
+    const [id, setId] = useState();
+    const [type, setType] = useState();
+    const [model, setModel] = useState();
+    const [factory, setFactory] = useState();
+    const [color, setColor] = useState();
+    const [plate, setPlate] = useState();
+    const [data, setData] = useContext(DataContext);
+    const history = useHistory();
+
+    function onConfirm() {
+        let cars = data.cars;
+        cars.push({
+            id,
+            type,
+            model,
+            factory,
+            color,
+            plate
+        });
+
+        setData({ ...data, cars });
+
+        alert('Registro adicionado com sucesso!');
+        history.push('/ADM/1');
+    };
+
+    useEffect(() => {
+        setId(Helper.getNextId(data.cars));
+    });
+
     return (
         <div>
             <div class='row'>
@@ -16,9 +49,11 @@ function CadastrarVeiculo(request, response) {
                 />
 
                 <nav id='navbar' class='col-sm-3 navbar-nav navbar-expand-lg navbar-light'>
+                    <a class='navbar-brand' href='/ADM/id_servidor'>Home</a>
+                    <a class='navbar-brand' href='/buscarusuario'>Buscar Usuario</a>
+                    <a class='navbar-brand' href='/lista/itenscadastrados'>Itens Cadastrados</a>
                     <span class='navbar-brand'>Cadastrar: </span>
                     <a class='navbar-text' href='/cadastrar/aluno'>Aluno</a>
-                    <a class='navbar-text' href='/cadastrar/veiculo'>Veiculo</a>
                     <a class='navbar-text' href='/cadastrar/servidor'>Servidor</a>
                     <a class='navbar-text' href='/cadastrar/visitante'>Visitante</a>
                     <a class='navbar-text' href='/cadastrar/estacionamento'>Estacionamento</a>
@@ -34,26 +69,31 @@ function CadastrarVeiculo(request, response) {
                         class='col-md-5'
                         type='text'
                         placeholder='Tipo'
+                        onChange={e => setType(e.target.value)}
                     />
                     <input
                         class='col-md-5'
                         type='text'
                         placeholder='Modelo'
+                        onChange={e => setModel(e.target.value)}
                     />
                     <input
                         class='col-md-5'
                         type='text'
                         placeholder='Fabricante'
+                        onChange={e => setFactory(e.target.value)}
                     />
                     <input
                         class='col-md-5'
                         type='text'
                         placeholder='Cor'
+                        onChange={e => setColor(e.target.value)}
                     />
                     <input
                         class='col-md-11'
                         type='text'
                         placeholder='Placa'
+                        onChange={e => setPlate(e.target.value)}
                     />
                     <l class='col-md-3'>
                         <Link id='link' to="/">Já cadastrado</Link>
@@ -61,7 +101,7 @@ function CadastrarVeiculo(request, response) {
                     <button
                         class='col-md-4'
                         value='CONFIRMAR'
-                        type='submit'
+                        onClick={() => onConfirm()}
                     >
                         CONFIRMAR
                     </button>

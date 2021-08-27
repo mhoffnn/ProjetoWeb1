@@ -4,24 +4,31 @@ import logo from '../../../utf-logo.png';
 
 import { useState, useContext } from 'react';
 
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 
 import { DataContext } from '../../../contexts/data';
 
 function CadastrarAluno(request, response) {
-    const [name, setName] = useState(null);
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
+    const [ra, setRa] = useState('');
+    const [grad, setGrad] = useState('');
     const [data, setData] = useContext(DataContext);
-
-    function handleName(name) {
-        setName(name);
-    };
+    const history = useHistory();
 
     function handleSubmit() {
-        let user = {
-            name
-        };
+        let students = data.students;
+        students.push({
+            name,
+            email,
+            phone,
+            ra,
+            grad
+        })
 
-        setData({ ...data, user });
+        setData({ ...data, students });
+        history.push('/cadastrar/senha/id_aluno');
     }
 
     return (
@@ -34,8 +41,9 @@ function CadastrarAluno(request, response) {
                 />
 
                 <nav id='navbar' class='col-sm-3 navbar-nav navbar-expand-lg navbar-light'>
+                    <a class='navbar-brand' href='/ADM/id_servidor'>Home</a>
+                    <a class='navbar-brand' href='/buscarusuario'>Buscar Usuario</a>
                     <span class='navbar-brand'>Cadastrar: </span>
-                    <a class='navbar-text' href='/cadastrar/aluno'>Aluno</a>
                     <a class='navbar-text' href='/cadastrar/veiculo'>Veiculo</a>
                     <a class='navbar-text' href='/cadastrar/servidor'>Servidor</a>
                     <a class='navbar-text' href='/cadastrar/visitante'>Visitante</a>
@@ -47,18 +55,18 @@ function CadastrarAluno(request, response) {
                 <h1 id='titulo'>
                     Cadastrar Aluno
                 </h1>
-                <button onClick={() => alert(data.user.name)}>asdf</button>
                 <div class='row'>
                     <input
                         class='col-md-11'
                         type='text'
                         placeholder='Nome'
-                        onChange={e => handleName(e.target.value)}
+                        onChange={e => setName(e.target.value)}
                     />
                     <input
                         class='col-md-5'
                         type='email'
                         placeholder='e-mail'
+                        onChange={e => setEmail(e.target.value)}
                     />
 
                     <input
@@ -66,6 +74,7 @@ function CadastrarAluno(request, response) {
                         class='col-md-5'
                         placeholder='telefone'
                         onkeypress="$(this).mask('(00) 0000-00009')"
+                        onChange={e => setPhone(e.target.value)}
                     />
 
                     <input
@@ -73,12 +82,14 @@ function CadastrarAluno(request, response) {
                         type='text'
                         placeholder='RA'
                         pattern="a[0-9]{7}"
+                        onChange={e => setRa(e.target.value)}
                     />
 
                     <input
                         class='col-md-5'
                         type='text'
                         placeholder='Curso'
+                        onChange={e => setGrad(e.target.value)}
                     />
                     <l class='col-sm-3'>
                         <Link id='link' to="/">Já cadastrado</Link>

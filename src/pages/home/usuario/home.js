@@ -2,9 +2,10 @@ import '../../../styles/global-styles.css';
 
 import logo from '../../../utf-logo.png';
 
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 function Home(request, response) {
+
     return (
         <div>
             <div class='row'>
@@ -15,10 +16,10 @@ function Home(request, response) {
                 />
 
                 <nav id='navbar' class='col-sm-3 navbar-nav navbar-expand-lg navbar-light'>
-                    <a class='navbar-text' href='/list/contestacao/:id_session'>Minhas Contestações</a>
-                    <a class='navbar-text' href='/associarveiculo/:id_session'>Adicionar Veículo</a>
-                    <a class='navbar-text' href='/editar/senha/:id_session'>Alterar senha</a>
-                    <a class='navbar-text' href='/editar/{tipo_usuario}/:id_session'>Editar meus dados</a>
+                    <a class='navbar-text' href='/lista/minhascontestacoes/2'>Minhas Contestações</a>
+                    <a class='navbar-text' href='/associarveiculo/2'>Adicionar Veículo</a>
+                    <a class='navbar-text' href='/editar/senha/2'>Alterar senha</a>
+                    <a class='navbar-text' href='/editar/aluno/2'>Editar meus dados</a>
                 </nav>
 
                 <div class='conteiner' id='cadastro'>
@@ -26,8 +27,8 @@ function Home(request, response) {
 
                         <li class="list-group-item list-group-item-warning">Minhas Ocorrências</li>
 
-                        <a href="#" class="list-group-item list-group-item-action">Test3</a>
-                        <a href="#" class="list-group-item list-group-item-action">Test3</a>
+                        <a href="/contestarocorrencia/1/2" class="list-group-item list-group-item-action">Carro com a luz acesa</a>
+                        <a href="/contestarocorrencia/2/2" class="list-group-item list-group-item-action">Moto estacionada em vaga de carro</a>
 
                     </ul>
                 </div>
