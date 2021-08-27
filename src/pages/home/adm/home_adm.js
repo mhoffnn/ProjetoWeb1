@@ -1,8 +1,8 @@
 import '../../../styles/global-styles.css';
 
 import logo from '../../../utf-logo.png';
+import estacionamento from '../../../estacionamento-utfpr.png';
 
-import { Link } from 'react-router-dom'
 import { useContext } from 'react';
 import { DataContext } from '../../../contexts/data';
 
@@ -10,7 +10,7 @@ import { DataContext } from '../../../contexts/data';
 
 function HomeAdm(request, response) {
     const [data] = useContext(DataContext);
-    
+
     return (
         <div>
             <div class='row'>
@@ -21,6 +21,8 @@ function HomeAdm(request, response) {
                 />
 
                 <nav id='navbar' class='col-sm-3 navbar-nav navbar-expand-lg navbar-light'>
+                    <a class='navbar-brand' href='/lista/itenscadastrados'>Itens Cadastrados</a>
+                    <a class='navbar-brand' href='/buscarusuario'>Buscar Usuario</a>
                     <span class='navbar-brand'>Cadastrar: </span>
                     <a class='navbar-text' href='/cadastrar/aluno'>Aluno</a>
                     <a class='navbar-text' href='/cadastrar/veiculo'>Veiculo</a>
@@ -28,64 +30,16 @@ function HomeAdm(request, response) {
                     <a class='navbar-text' href='/cadastrar/visitante'>Visitante</a>
                     <a class='navbar-text' href='/cadastrar/estacionamento'>Estacionamento</a>
                 </nav>
+            </div>
 
-                <div class='container' id='cadastro'>
-                    <h2>Estacionamentos cadastrados:</h2>
-                    <table class='table'>
-                        <thead>
-                            <tr>
-                                <th scope='col'>Cod.</th>
-                                <th scope='col'>Descrição</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {
-                                data.parkingLots.map(pl => {
-                                    return (
-                                        <tr>
-                                            <th scope='row'>{pl.id}</th>
-                                            <td>{pl.description}</td>
-                                        </tr>
-                                    )
-                                })
-                            }
-                       </tbody>
-                    </table>
-                </div>
-
-
-                <div class='container' id='cadastro'>
-                    <h2>Veículos cadastrados:</h2>
-                    <table class='table'>
-                        <thead>
-                            <tr>
-                                <th scope='col'>Cod.</th>
-                                <th scope='col'>Tipo</th>
-                                <th scope='col'>Modelo</th>
-                                <th scope='col'>Fabricante</th>
-                                <th scope='col'>Cor</th>
-                                <th scope='col'>Placa</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {
-                                data.cars.map(c => {
-                                    return (
-                                        <tr>
-                                            <th scope='row'>{c.id}</th>
-                                            <td>{c.type}</td>
-                                            <td>{c.model}</td>
-                                            <td>{c.factory}</td>
-                                            <td>{c.color}</td>
-                                            <td>{c.plate}</td>
-                                        </tr>
-                                    )
-                                })
-                            }
-                       </tbody>
-                    </table>
-                </div>
-
+            <div class='row' id='image-map'>
+                <h1 id='titulo'>Registrar Ocorrência</h1>
+                <img src={estacionamento} id="map-image" width='906px' max-width='100%' height='auto' alt="a" usemap="#map" />
+                <map name="map">
+                    <area shape="rect" coords="31, 100, 337, 706" href='/cadastrar/ocorrencia/A1' />
+                    <area shape="rect" coords="339, 98, 883, 403" href='/cadastrar/ocorrencia/B2' />
+                    <area shape="rect" coords="340, 404, 883, 709" href='/cadastrar/ocorrencia/C3' />
+                </map>
             </div>
         </div>
     );

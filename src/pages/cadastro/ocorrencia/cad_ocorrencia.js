@@ -1,27 +1,17 @@
-import '../../styles/global-styles.css';
+import '../../../styles/global-styles.css';
 
-import logo from '../../utf-logo.png';
+import logo from '../../../utf-logo.png';
 
-import { useState } from 'react'
-import { Link, useHistory } from 'react-router-dom'
+import { Link, useHistory, useParams } from 'react-router-dom'
 
-function BuscarUsuario(request, response) {
-    const [placa, setPlaca] = useState('');
+function CadastrarOcorrencia(request, response) {
     const history = useHistory();
 
     function onConfirm() {
-
-
-        if (placa == "ser123") {
-            history.push('/home/idser')
-        } else if (placa == "alu321") {
-            history.push('/home/idalu')
-        } else if (placa == "vis000") {
-            history.push('/home/idvis')
-        } else {
-            alert('Usuario não encontrado!')
-        }
+        history.push('/ADM/id_servidor');
     }
+
+    let { id_estacionamento } = useParams();
 
     return (
         <div>
@@ -34,28 +24,50 @@ function BuscarUsuario(request, response) {
 
                 <nav id='navbar' class='col-sm-3 navbar-nav navbar-expand-lg navbar-light'>
                     <a class='navbar-brand' href='/ADM/id_servidor'>Home</a>
+                    <a class='navbar-brand' href='/buscarusuario'>Buscar Usuario</a>
                     <span class='navbar-brand'>Cadastrar: </span>
                     <a class='navbar-text' href='/cadastrar/aluno'>Aluno</a>
-                    <a class='navbar-text' href='/cadastrar/veiculo'>Veiculo</a>
                     <a class='navbar-text' href='/cadastrar/servidor'>Servidor</a>
                     <a class='navbar-text' href='/cadastrar/visitante'>Visitante</a>
                     <a class='navbar-text' href='/cadastrar/estacionamento'>Estacionamento</a>
+                    <a class='navbar-text' href='/lista/itenscadastrados'>Itens Cadastrados</a>
                 </nav>
             </div>
 
             <div class="container" id='cadastro'>
                 <h1 id='titulo'>
-                    Buscar usuário
+                    Cadastrar Ocorrência
                 </h1>
                 <div class='row'>
                     <input
-                        class='col-md-11'
+                        class='col-md-5'
                         type='text'
                         placeholder='Placa do Veículo'
-                        onChange={e => setPlaca(e.target.value)}
+                    />
+                    <input
+                        class='col-md-5'
+                        type='text'
+                        placeholder={id_estacionamento}
+                        disabled
+                    />
+                    <input
+                        class='col-md-5'
+                        type='datetime'
+                        placeholder='Data e Hora'
+                    />
+                    <input
+                        class='col-md-5'
+                        type='file'
+                        placeholder='Inserir foto'
+                    />
+                    <input
+                        class='col-md-11'
+                        type='textarea'
+                        placeholder='Observação'
                     />
                     <button
                         class='col-md-6'
+                        value='CONFIRMAR'
                         onClick={() => onConfirm()}
                     >
                         CONFIRMAR
@@ -66,4 +78,4 @@ function BuscarUsuario(request, response) {
     );
 }
 
-export default BuscarUsuario;
+export default CadastrarOcorrencia;

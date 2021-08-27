@@ -17,15 +17,15 @@ function CadastrarEstacionamento(request, response) {
 
     function onConfirm() {
         let parkingLots = data.parkingLots;
-                
+
         parkingLots.push({
             id,
             description: desc
         })
 
-        setData({...data, parkingLots });
+        setData({ ...data, parkingLots });
 
-        alert('Registro adicionado com sucesso!');        
+        alert('Registro adicionado com sucesso!');
         history.push('/ADM/1');
     }
 
@@ -43,12 +43,14 @@ function CadastrarEstacionamento(request, response) {
                 />
 
                 <nav id='navbar' class='col-sm-3 navbar-nav navbar-expand-lg navbar-light'>
+                    <a class='navbar-brand' href='/ADM/id_servidor'>Home</a>
+                    <a class='navbar-brand' href='/lista/itenscadastrados'>Itens Cadastrados</a>
+                    <a class='navbar-brand' href='/buscarusuario'>Buscar Usuario</a>
                     <span class='navbar-brand'>Cadastrar: </span>
                     <a class='navbar-text' href='/cadastrar/aluno'>Aluno</a>
                     <a class='navbar-text' href='/cadastrar/veiculo'>Veiculo</a>
                     <a class='navbar-text' href='/cadastrar/servidor'>Servidor</a>
                     <a class='navbar-text' href='/cadastrar/visitante'>Visitante</a>
-                    <a class='navbar-text' href='/cadastrar/estacionamento'>Estacionamento</a>
                 </nav>
             </div>
 
@@ -71,11 +73,8 @@ function CadastrarEstacionamento(request, response) {
                         placeholder='Descrição'
                         onChange={e => setDesc(e.target.value)}
                     />
-                    <l class='col-md-3'>
-                        <Link id='link' to="/">Já cadastrado</Link>
-                    </l>
                     <button
-                        class='col-md-4'
+                        class='col-md-6'
                         value='CONFIRMAR'
                         onClick={() => onConfirm()}
                     >

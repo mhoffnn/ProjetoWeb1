@@ -2,9 +2,16 @@ import '../../../styles/global-styles.css';
 
 import logo from '../../../utf-logo.png';
 
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 
 function CadastrarServidor(request, response) {
+
+    const history = useHistory();
+
+    function onConfirm() {
+        history.push('/cadastrar/senha/id_servidor');
+    }
+
     return (
         <div>
             <div class='row'>
@@ -15,10 +22,11 @@ function CadastrarServidor(request, response) {
                 />
 
                 <nav id='navbar' class='col-sm-3 navbar-nav navbar-expand-lg navbar-light'>
-                    <span class='navbar-brand'>Cadastrar: </span>
+                    <a class='navbar-brand' href='/ADM/id_servidor'>Home</a>
+                    <a class='navbar-brand' href='/buscarusuario'>Buscar Usuario</a>
+<span class='navbar-brand'>Cadastrar: </span>
                     <a class='navbar-text' href='/cadastrar/aluno'>Aluno</a>
                     <a class='navbar-text' href='/cadastrar/veiculo'>Veiculo</a>
-                    <a class='navbar-text' href='/cadastrar/servidor'>Servidor</a>
                     <a class='navbar-text' href='/cadastrar/visitante'>Visitante</a>
                     <a class='navbar-text' href='/cadastrar/estacionamento'>Estacionamento</a>
                 </nav>
@@ -69,8 +77,7 @@ function CadastrarServidor(request, response) {
                     </l>
                     <button
                         class='col-md-4'
-                        value='CONFIRMAR'
-                        type='submit'
+                        onClick={() => onConfirm()}
                     >
                         CONFIRMAR
                     </button>

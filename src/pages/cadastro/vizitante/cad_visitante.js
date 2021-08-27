@@ -2,9 +2,16 @@ import '../../../styles/global-styles.css';
 
 import logo from '../../../utf-logo.png';
 
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 
 function CadastrarVisitante(request, response) {
+
+    const history = useHistory();
+
+    function onConfirm() {
+        history.push('/cadastrar/senha/id_vizitante');
+    }
+
     return (
         <div>
             <div class='row'>
@@ -15,11 +22,12 @@ function CadastrarVisitante(request, response) {
                 />
 
                 <nav id='navbar' class='col-sm-3 navbar-nav navbar-expand-lg navbar-light'>
+                    <a class='navbar-brand' href='/ADM/id_servidor'>Home</a>
+                    <a class='navbar-brand' href='/buscarusuario'>Buscar Usuario</a>
                     <span class='navbar-brand'>Cadastrar: </span>
                     <a class='navbar-text' href='/cadastrar/aluno'>Aluno</a>
                     <a class='navbar-text' href='/cadastrar/veiculo'>Veiculo</a>
                     <a class='navbar-text' href='/cadastrar/servidor'>Servidor</a>
-                    <a class='navbar-text' href='/cadastrar/visitante'>Visitante</a>
                     <a class='navbar-text' href='/cadastrar/estacionamento'>Estacionamento</a>
                 </nav>
             </div>
@@ -55,7 +63,7 @@ function CadastrarVisitante(request, response) {
                     <button
                         class='col-md-4'
                         value='CONFIRMAR'
-                        type='submit'
+                        onClick={() => onConfirm()}
                     >
                         CONFIRMAR
                     </button>

@@ -12,11 +12,23 @@ export let setData;
 export class DataModel {
   constructor(...args) {
     const properties = {
-      user: {
-        id: null,
-        name: null,
-        doc: null
-      },
+      user: [
+        {
+          id: 1,
+          name: "Servidor",
+          placa: "ser123"
+        },
+        {
+          id: 2,
+          name: "Aluno",
+          placa: "alu321"
+        },
+        {
+          id: 3,
+          name: "Visitante",
+          placa: "vis231"
+        },
+      ],
       students: [
         {
           id: null,
@@ -30,6 +42,10 @@ export class DataModel {
           description: 'Exemplo'
         }
       ],
+      ocorrencia: {
+        description: '',
+        data: ''
+      },
       cars: [
         {
           id: 1,
