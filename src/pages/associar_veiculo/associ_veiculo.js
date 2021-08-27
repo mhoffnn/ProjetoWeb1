@@ -7,33 +7,43 @@ import { Link } from 'react-router-dom'
 function AssociarVeiculo(request, response) {
     return (
         <div>
-            <img src={logo} className="logo-direita" alt="logo" />
-            <div id='cadastro'>
+            <div class='row'>
+                <img src={logo}
+                    class='col-sm-3'
+                    id="logo-direita"
+                    alt="logo"
+                />
+
+            </div>
+
+            <div class="container" id='cadastro'>
                 <h1 id='titulo'>
                     Seu Veículo
                 </h1>
-                <div>
+                <div class='row'>
                     <input
-                        id='large-input'
+                        class='col-md-11'
                         type='text'
                         placeholder='Placa do Veículo'
                     />
                     <input
-                        id='large-input'
+                        class='col-md-11'
                         type='text'
                         placeholder='Repita a placa'
                     />
-                    <l id='call-me'>
-                        <Link to="/associarveiculo/:id_session">Associar outro veículo</Link>
+                    <l class='col-md-4'>
+                        <Link id='link-login' to="/associarveiculo/:id_session">Associar outro veículo</Link>
                     </l>
-                    <input
-                        id='unique'
+                    <button
+                        class='col-md-4'
                         value='CONFIRMAR'
                         type='submit'
-                    />
+                    >
+                        CONFIRMAR
+                    </button>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
 
