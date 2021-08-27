@@ -26,18 +26,18 @@ export class DataModel {
       ],
       parkingLots: [
         {
-          id: null,
-          description: null
+          id: 1,
+          description: 'Exemplo'
         }
       ],
       cars: [
         {
-          id: null,
-          type: null,
-          model: null,
-          factory: null,
-          color: null,
-          plate: null
+          id: 1,
+          type: 'Hatch',
+          model: 'Gol',
+          factory: 'Volkswagen',
+          color: 'Branco',
+          plate: 'EXE-9P70'
         }
       ],
       test: 'test',

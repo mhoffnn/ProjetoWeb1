@@ -3,7 +3,7 @@ import '../../../styles/global-styles.css';
 
 import logo from '../../../utf-logo.png';
 
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { useContext, useEffect, useState } from 'react';
 import { DataContext } from '../../../contexts/data';
 import Helper from '../../../helpers/general';
@@ -16,6 +16,7 @@ function CadastrarVeiculo(request, response) {
     const [color, setColor] = useState();
     const [plate, setPlate] = useState();
     const [data, setData] = useContext(DataContext);
+    const history = useHistory();
 
     function onConfirm() {
         let cars = data.cars;
@@ -28,7 +29,10 @@ function CadastrarVeiculo(request, response) {
             plate
         });
 
-        setData({ ...data, cars })
+        setData({ ...data, cars });
+
+        alert('Registro adicionado com sucesso!');        
+        history.push('/ADM/1');
     };
 
     useEffect(() => {

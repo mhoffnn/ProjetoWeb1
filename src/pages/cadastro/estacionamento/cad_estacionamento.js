@@ -3,7 +3,7 @@ import '../../../styles/global-styles.css';
 
 import logo from '../../../utf-logo.png';
 
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { useContext, useEffect, useState } from 'react';
 import { DataContext } from '../../../contexts/data';
 
@@ -13,6 +13,7 @@ function CadastrarEstacionamento(request, response) {
     const [desc, setDesc] = useState();
     const [id, setId] = useState();
     const [data, setData] = useContext(DataContext);
+    const history = useHistory();
 
     function onConfirm() {
         let parkingLots = data.parkingLots;
@@ -24,7 +25,8 @@ function CadastrarEstacionamento(request, response) {
 
         setData({...data, parkingLots });
 
-        alert('Registro adicionado com sucesso!');
+        alert('Registro adicionado com sucesso!');        
+        history.push('/ADM/1');
     }
 
     useEffect(() => {
