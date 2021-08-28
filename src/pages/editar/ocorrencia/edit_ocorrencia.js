@@ -2,8 +2,8 @@ import '../../../styles/global-styles.css';
 
 import logo from '../../../utf-logo.png';
 
-import { Link, useHistory, useParams } from 'react-router-dom'
-import { useContext, useState } from 'react';
+import { useHistory, useParams } from 'react-router-dom'
+import { useContext } from 'react';
 
 import { DataContext } from '../../../contexts/data';
 
@@ -11,27 +11,26 @@ function ContestarOcorrencia(request, response) {
     let { id_user } = useParams();
     let { id_ocorrencia } = useParams();
 
-    let [user] = useContext(DataContext);
     let [ocorrencia] = useContext(DataContext);
 
     const history = useHistory();
 
     function onConfirm() {
-        if (id_user == 1) {
+        if (id_user === 1) {
             history.push('/home/1');
-        } else if (id_user == 2) {
+        } else if (id_user === 2) {
             history.push('/home/2');
-        } else if (id_user == 3) {
+        } else if (id_user === 3) {
             history.push('/home/3');
         }
     }
 
-    if (id_ocorrencia == 1) {
+    if (id_ocorrencia === 1) {
         ocorrencia = {
             description: "Carro com a luz acesa",
             data: "24/04/2021 18:45"
         }
-    } else if (id_ocorrencia == 2) {
+    } else if (id_ocorrencia === 2) {
         ocorrencia = {
             description: "Moto estacionada em vaga de carro",
             data: "30/03/2021 20:13"

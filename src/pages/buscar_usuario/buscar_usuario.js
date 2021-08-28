@@ -3,7 +3,7 @@ import '../../styles/global-styles.css';
 import logo from '../../utf-logo.png';
 
 import { useState } from 'react'
-import { Link, useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 function BuscarUsuario(request, response) {
     const [placa, setPlaca] = useState('');
@@ -12,11 +12,11 @@ function BuscarUsuario(request, response) {
     function onConfirm() {
 
 
-        if (placa == "ser123") {
+        if (placa === "ser123") {
             history.push('/home/idser')
-        } else if (placa == "alu321") {
+        } else if (placa === "alu321") {
             history.push('/home/idalu')
-        } else if (placa == "vis000") {
+        } else if (placa === "vis000") {
             history.push('/home/idvis')
         } else {
             alert('Usuario não encontrado!')

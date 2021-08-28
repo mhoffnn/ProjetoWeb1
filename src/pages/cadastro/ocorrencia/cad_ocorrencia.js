@@ -2,7 +2,7 @@ import '../../../styles/global-styles.css';
 
 import logo from '../../../utf-logo.png';
 
-import { Link, useHistory, useParams } from 'react-router-dom'
+import { useHistory, useParams } from 'react-router-dom'
 
 function CadastrarOcorrencia(request, response) {
     const history = useHistory();

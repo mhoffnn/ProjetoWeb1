@@ -7,6 +7,7 @@ import { Link, useParams } from 'react-router-dom'
 
 function EditarServidor(request, response) {
     let { id_servidor } = useParams();
+    id_servidor = 1;
 
     return (
         <div>

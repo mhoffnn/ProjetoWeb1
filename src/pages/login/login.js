@@ -23,9 +23,9 @@ function Login(request, response) {
             }
         })
 
-        if (name == "servidor") {
+        if (name === "servidor") {
             history.push('/ADM/id_servidor')
-        } else if (name == "aluno") {
+        } else if (name === "aluno") {
             history.push('/home/2');
         } else {
             history.push('/home/3');

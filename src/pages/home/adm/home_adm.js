@@ -3,12 +3,7 @@ import '../../../styles/global-styles.css';
 import logo from '../../../utf-logo.png';
 import estacionamento from '../../../estacionamento-utfpr.png';
 
-import { useContext } from 'react';
-import { DataContext } from '../../../contexts/data'
-
 function HomeAdm(request, response) {
-    const [data] = useContext(DataContext);
-
     return (
         <div>
             <div class='row'>

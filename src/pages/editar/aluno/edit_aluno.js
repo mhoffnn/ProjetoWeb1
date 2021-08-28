@@ -7,6 +7,7 @@ import { Link, useParams } from 'react-router-dom'
 
 function EditarEstacionamento(request, response) {
     let { id_aluno } = useParams();
+    id_aluno = 2;
 
     return (
         <div>

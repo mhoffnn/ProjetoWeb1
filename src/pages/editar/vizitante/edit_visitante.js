@@ -7,6 +7,7 @@ import { Link, useParams } from 'react-router-dom'
 
 function EditarVisitante(request, response) {
     let { id_visitante } = useParams();
+    id_visitante = 3;
 
     return (
         <div>

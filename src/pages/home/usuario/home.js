@@ -2,8 +2,6 @@ import '../../../styles/global-styles.css';
 
 import logo from '../../../utf-logo.png';
 
-import { Link, useParams } from 'react-router-dom'
-
 function Home(request, response) {
 
     return (

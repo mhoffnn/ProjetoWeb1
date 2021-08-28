@@ -28,7 +28,7 @@ function MinhasContestacoes(request, response) {
                     <thead>
                         <tr>
                             <th scope='col'>Titulo</th>
-                            <th scope='col'>Aprovado</th>
+                            <th>Aprovado</th>
                         </tr>
                     </thead>
                     <tbody>
