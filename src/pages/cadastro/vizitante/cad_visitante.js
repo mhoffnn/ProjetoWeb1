@@ -57,11 +57,9 @@ function CadastrarVisitante(request, response) {
                         type='text'
                         placeholder='CPF'
                     />
-                    <l class='col-md-3'>
-                        <Link id='link' to="/">Já cadastrado</Link>
-                    </l>
+
                     <button
-                        class='col-md-4'
+                        class='col-md-5'
                         value='CONFIRMAR'
                         onClick={() => onConfirm()}
                     >

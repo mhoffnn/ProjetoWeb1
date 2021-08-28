@@ -91,11 +91,9 @@ function CadastrarAluno(request, response) {
                         placeholder='Curso'
                         onChange={e => setGrad(e.target.value)}
                     />
-                    <l class='col-sm-3'>
-                        <Link id='link' to="/">Já cadastrado</Link>
-                    </l>
+
                     <button
-                        class='col-md-4'
+                        class='col-md-5'
                         value='CONFIRMAR'
                         type='submit'
                         onClick={() => handleSubmit()}

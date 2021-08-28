@@ -2,9 +2,15 @@ import '../../styles/global-styles.css';
 
 import logo from '../../utf-logo.png';
 
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 
 function AssociarVeiculo(request, response) {
+    const history = useHistory();
+
+    function onConfirm() {
+        history.push('/home/2');
+    }
+
     return (
         <div>
             <div class='row'>
@@ -32,12 +38,12 @@ function AssociarVeiculo(request, response) {
                         placeholder='Repita a placa'
                     />
                     <l class='col-md-4'>
-                        <Link id='link-login' to="/associarveiculo/:id_session">Associar outro veículo</Link>
+                        <Link id='link' to="/associarveiculo/:id_session">Associar outro veículo</Link>
                     </l>
                     <button
                         class='col-md-4'
                         value='CONFIRMAR'
-                        type='submit'
+                        onClick={() => onConfirm()}
                     >
                         CONFIRMAR
                     </button>

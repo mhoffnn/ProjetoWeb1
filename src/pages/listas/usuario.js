@@ -14,26 +14,26 @@ function Login(request, response) {
     const history = useHistory();
 
     function onConfirm() {
-        if (id_user === 1) {
+        if (id_user === "1") {
             history.push('/editar/servidor/id_servidor');
-        } else if (id_user === 2) {
+        } else if (id_user === "2") {
             history.push('/editar/aluno/id_aluno');
-        } else if (id_user === 3) {
+        } else if (id_user === "3") {
             history.push('/editar/visitante/id_visitante');
         }
     }
-    
-    if (id_user === 1) {
+
+    if (id_user === "1") {
         user = {
             name: "Servidor",
             placa: "ser123",
         }
-    } else if (id_user === 2) {
+    } else if (id_user === "2") {
         user = {
             name: "Aluno",
             placa: "alu321",
         }
-    } else if (id_user === 3) {
+    } else if (id_user === "3") {
         user = {
             name: "Visitante",
             placa: "vis000",

@@ -2,7 +2,7 @@ import '../../../styles/global-styles.css';
 
 import logo from '../../../utf-logo.png';
 
-import { Link, useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 function CadastrarServidor(request, response) {
 
@@ -24,7 +24,7 @@ function CadastrarServidor(request, response) {
                 <nav id='navbar' class='col-sm-3 navbar-nav navbar-expand-lg navbar-light'>
                     <a class='navbar-brand' href='/ADM/id_servidor'>Home</a>
                     <a class='navbar-brand' href='/buscarusuario'>Buscar Usuario</a>
-<span class='navbar-brand'>Cadastrar: </span>
+                    <span class='navbar-brand'>Cadastrar: </span>
                     <a class='navbar-text' href='/cadastrar/aluno'>Aluno</a>
                     <a class='navbar-text' href='/cadastrar/veiculo'>Veiculo</a>
                     <a class='navbar-text' href='/cadastrar/visitante'>Visitante</a>
@@ -72,11 +72,9 @@ function CadastrarServidor(request, response) {
                         type='text'
                         placeholder='Sala'
                     />
-                    <l class='col-md-3'>
-                        <Link id='link' to="/">Já cadastrado</Link>
-                    </l>
+
                     <button
-                        class='col-md-4'
+                        class='col-md-5'
                         onClick={() => onConfirm()}
                     >
                         CONFIRMAR

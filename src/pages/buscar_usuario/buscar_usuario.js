@@ -13,11 +13,11 @@ function BuscarUsuario(request, response) {
 
 
         if (placa === "ser123") {
-            history.push('/home/idser')
+            history.push('/usuario/1')
         } else if (placa === "alu321") {
-            history.push('/home/idalu')
+            history.push('/usuario/2')
         } else if (placa === "vis000") {
-            history.push('/home/idvis')
+            history.push('/usuario/3')
         } else {
             alert('Usuario não encontrado!')
         }
