@@ -31,7 +31,7 @@ function EditarEstacionamento(request, response) {
 
             <div class="container" id='cadastro'>
                 <h1 id='titulo'>
-                    Cadastrar Estacionamento
+                    Editar Estacionamento
                 </h1>
                 <div class='row'>
                     <input

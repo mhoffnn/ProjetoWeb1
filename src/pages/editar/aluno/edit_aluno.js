@@ -26,7 +26,7 @@ function EditarEstacionamento(request, response) {
 
             <div class="container" id='cadastro'>
                 <h1 id='titulo'>
-                    Cadastrar Aluno
+                    Editar Aluno
                 </h1>
                 <div class='row'>
                     <input

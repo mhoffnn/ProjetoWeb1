@@ -35,7 +35,7 @@ function EditarServidor(request, response) {
 
             <div class="container" id='cadastro'>
                 <h1 id='titulo'>
-                    Cadastrar Servidor
+                    Editar Servidor
                 </h1>
                 <div class='row'>
                     <input

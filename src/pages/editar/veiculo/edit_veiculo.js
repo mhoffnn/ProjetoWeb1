@@ -30,7 +30,7 @@ function EditarVeiculo(request, response) {
 
             <div class="container" id='cadastro'>
                 <h1 id='titulo'>
-                    Cadastrar Veiculo
+                    Editar Veiculo
                 </h1>
                 <div class='row'>
                     <input

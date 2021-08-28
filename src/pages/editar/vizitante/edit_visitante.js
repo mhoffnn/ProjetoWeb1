@@ -30,7 +30,7 @@ function EditarVisitante(request, response) {
 
             <div class="container" id='cadastro'>
                 <h1 id='titulo'>
-                    Cadastrar Visitante
+                    Editar Visitante
                 </h1>
                 <div class='row'>
                     <input
